@@ -19,6 +19,7 @@ const server = setupServer(
 describe('tests the simpsonsQuote container', () => {
     beforeAll(() => server.listen());
     afterAll(() => server.close());
+    
     it('tests for img, text, character returned and displays to page', () => {
         render(<SimpsonsQuote />)
         screen.getByText('Generate Simpson');
